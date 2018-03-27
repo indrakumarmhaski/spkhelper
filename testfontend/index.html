@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- This is the landing page of application
+we have to create a butiful form for login with a link to signup page.
+This will be the first page which anyone will see So plese work hard and make it 
+loot good.
+ -->
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        
+        <script>
+            // Script that validate the form.
+            function formvalidat()
+            {
+                var result=true;
+                var i=document.getElementsByName("username");
+                var j=document.getElementsByName("password");
+                if(i[0].value.length==0)
+                {
+                    alert('Please Enter Username');
+                    result=false;
+                }
+                else if(j[0].value.length==0)
+                {
+                    alert('Please Enter Password');
+                    result=false;
+                }
+                return(result);
+            }
+        </script>
+
+    </head>
+    <body>
+            
+             
+
+            <form action="login.php" method="post" onsubmit="return formvalidat()">
+            
+               <label class="glyphicon glyphicon-user" >Username:</label> 
+
+               <input type="text" name="username">  
+
+               <label >Password: </label>
+
+               <input type="password" name="password">
+
+               <input type="submit" value="Login">
+
+               <a href="signupform.php" >SignUp now</a>        <!-- Link to sgnupform -->
+              
+            </form>
+
+
+
+    </body>
+</html>
